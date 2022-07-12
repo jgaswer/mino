@@ -40,9 +40,9 @@ RUN set -x \
 
     # Compile from source code.
 
- && git clone --recursive https://github.com/litecoincash-project/cpuminer-multi.git /tmp/cpuminer \
+ && git clone --recursive https://github.com/litecoincash-project/cpuminer-multi.git \
 
- && cd /tmp/cpuminer \
+ && cd /cpuminer \
 
  && ./build.sh \
 
