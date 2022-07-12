@@ -66,7 +66,7 @@ RUN set -x \
 
         pkg-config \
 
- && apt-get clean \
+ && apt-get clean 
 
  
     # Verify
