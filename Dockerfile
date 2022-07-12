@@ -77,7 +77,7 @@ RUN set -x \
 
  && rm -rf /var/lib/apt/lists/* \
 
- && rm -rf /tmp/* \
+ #&& rm -rf /tmp/* \
 
     # Verify
 
