@@ -10,7 +10,7 @@ RUN set -x \
 
     # Build dependencies.
 
- && apt-get install -y \
+ && apt-get install -y \ 
 
         autoconf \
 
@@ -34,15 +34,16 @@ RUN set -x \
 
         make \
 
-        pkg-config
+        pkg-config \
+        
 
 RUN set -x \
 
     # Compile from source code.
 
- && git clone --recursive https://github.com/litecoincash-project/cpuminer-multi.git \
+ && git clone https://github.com/litecoincash-project/cpuminer-multi.git /tmp/cpuminer \
 
- && cd /cpuminer-multi \
+ && cd /tmp/cpuminer \
 
  && ./build.sh \
 
@@ -79,13 +80,12 @@ RUN set -x \
  && rm -rf /tmp/* \
 
     # Verify
- && cd /cpuminer-multi \
 
  && cpuminer --cputest \
 
  && cpuminer --version
 
-WORKDIR /cpuminer-multi
+WORKDIR /cpuminer
 
 COPY config.json /cpuminer-multi
 
