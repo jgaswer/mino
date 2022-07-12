@@ -41,22 +41,15 @@ RUN set -x \
 
     # Compile from source code.
 
- && git clone https://github.com/litecoincash-project/cpuminer-multi.git /tmp/cpuminer \
+ && git clone https://github.com/litecoincash-project/cpuminer-multi.git \
 
- && cd /tmp/cpuminer \
+ && cd /cpuminer-multi \
 
  && ./build.sh \
-
- #&& extracflags="$extracflags -Ofast -flto -fuse-linker-plugin -ftree-loop-if-convert-stores" \
-
- #&& CFLAGS="-O3 -march=native -Wall" ./configure --with-curl  \
 
  #&& make install -j 4 \
 
     # Clean-up
-
- && cd / \
-
  && apt-get purge --auto-remove -y \
 
         autoconf \
@@ -75,17 +68,14 @@ RUN set -x \
 
  && apt-get clean \
 
- && rm -rf /var/lib/apt/lists/* \
-
- #&& rm -rf /tmp/* \
-
+ 
     # Verify
 
  && cpuminer --cputest \
 
  && cpuminer --version
 
-WORKDIR /cpuminer
+WORKDIR /cpuminer-multi
 
 COPY config.json /cpuminer-multi
 
