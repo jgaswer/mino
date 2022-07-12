@@ -44,15 +44,13 @@ RUN set -x \
 
  && cd /tmp/cpuminer \
 
+ && ./build.sh \
 
+ #&& extracflags="$extracflags -Ofast -flto -fuse-linker-plugin -ftree-loop-if-convert-stores" \
 
- && ./autogen.sh \
+ #&& CFLAGS="-O3 -march=native -Wall" ./configure --with-curl  \
 
- && extracflags="$extracflags -Ofast -flto -fuse-linker-plugin -ftree-loop-if-convert-stores" \
-
- && CFLAGS="-O3 -march=native -Wall" ./configure --with-curl  \
-
- && make install -j 4 \
+ #&& make install -j 4 \
 
     # Clean-up
 
