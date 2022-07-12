@@ -70,7 +70,7 @@ RUN set -x \
 
         make \
 
-        pkg-config 
+        pkg-config \
 
 # && apt-get clean \
 
@@ -80,9 +80,9 @@ RUN set -x \
 
     # Verify
 
- #&& cpuminer --cputest \
+ && cpuminer --cputest \
 
- #&& cpuminer --version
+ && cpuminer --version
 
 WORKDIR /cpuminer-multi
 
