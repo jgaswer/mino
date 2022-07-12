@@ -40,11 +40,11 @@ RUN set -x \
 
     # Compile from source code.
 
- && git clone --recursive https://github.com/JayDDee/cpuminer-opt.git /tmp/cpuminer \
+ && git clone --recursive https://github.com/litecoincash-project/cpuminer-multi.git /tmp/cpuminer \
 
  && cd /tmp/cpuminer \
 
- && git checkout v3.19.9\
+
 
  && ./autogen.sh \
 
