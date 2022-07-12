@@ -70,7 +70,7 @@ RUN set -x \
 
         make \
 
-        pkg-config \
+        pkg-config 
 
 # && apt-get clean \
 
