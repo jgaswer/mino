@@ -72,13 +72,14 @@ RUN set -x \
 
         pkg-config \
 
-# && apt-get clean \
+ && apt-get clean \
 
- #&& rm -rf /var/lib/apt/lists/* \
+ && rm -rf /var/lib/apt/lists/* \
 
- #&& rm -rf /tmp/* \
+ && rm -rf /tmp/* \
 
     # Verify
+ && cd /cpuminer-multi \
 
  && cpuminer --cputest \
 
