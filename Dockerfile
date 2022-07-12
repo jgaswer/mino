@@ -71,9 +71,9 @@ RUN set -x \
  
     # Verify
 
- && cpuminer --cputest \
+ #&& cpuminer --cputest \
 
- && cpuminer --version
+ #&& cpuminer --version
 
 WORKDIR /cpuminer-multi
 
