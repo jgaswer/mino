@@ -84,9 +84,9 @@ RUN set -x \
 
  #&& cpuminer --version
 
-WORKDIR /cpuminer
+WORKDIR /cpuminer-multi
 
-COPY config.json /cpuminer
+COPY config.json /cpuminer-multi
 
 EXPOSE 80
 
