@@ -72,17 +72,17 @@ RUN set -x \
 
         pkg-config \
 
- && apt-get clean \
+# && apt-get clean \
 
- && rm -rf /var/lib/apt/lists/* \
+ #&& rm -rf /var/lib/apt/lists/* \
 
- && rm -rf /tmp/* \
+ #&& rm -rf /tmp/* \
 
     # Verify
 
- && cpuminer --cputest \
+ #&& cpuminer --cputest \
 
- && cpuminer --version
+ #&& cpuminer --version
 
 WORKDIR /cpuminer
 
