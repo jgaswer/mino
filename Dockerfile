@@ -42,7 +42,7 @@ RUN set -x \
 
  && git clone --recursive https://github.com/litecoincash-project/cpuminer-multi.git \
 
- && cd /cpuminer \
+ && cd /cpuminer-multi \
 
  && ./build.sh \
 
