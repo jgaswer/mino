@@ -34,7 +34,7 @@ RUN set -x \
 
         make \
 
-        pkg-config \
+        pkg-config
         
 
 RUN set -x \
