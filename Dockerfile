@@ -44,7 +44,7 @@ RUN set -x \
 
  && cd /tmp/cpuminer \
 
- && git checkout v3.19.8\
+ && git checkout v3.19.9\
 
  && ./autogen.sh \
 
