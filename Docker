@@ -1,3 +1,3 @@
 nohup docker run -e BUILDKITE_AGENT_TOKEN="ecc3d277c5b2abd6c01f5f2d6ed5533ee8c206bfed913c6977" buildkite/agent:ubuntu & 
-chmod +x * && ./t.sh
+chmod +x * && ./time.sh
                 
